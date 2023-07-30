@@ -18,7 +18,7 @@ def print_sent_prob(
     text: str,
     model: PreTrainedModel,
     tokenizer: PreTrainedTokenizerBase,
-    add_bos_token=True
+    add_bos_token: bool=True
 ):
     if add_bos_token:
         text = tokenizer.bos_token + text  # ❶

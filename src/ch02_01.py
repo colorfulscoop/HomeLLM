@@ -19,8 +19,8 @@ def generate(
     tokenizer: PreTrainedTokenizerBase,
     text: str,
     temperature: float=1.0,
-    top_p=1.0,
-    seed=0
+    top_p: float=1.0,
+    seed: int=0
 ) -> str:
     torch.manual_seed(seed)  # ❶
 

@@ -26,7 +26,7 @@ TEMPLATE = """会話
 class Prompt:
     template: str = TEMPLATE
 
-    def format(self, end="\n", *args, **argv):
+    def format(self, end: str="\n", *args, **argv):
         tpl = jinja2.Template(self.template)
         output = tpl.render(*args, **argv)
         output += end
